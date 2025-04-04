@@ -2,6 +2,7 @@
 
 ## Overview
 The Node Translation API is a RESTful service that provides translation capabilities using a machine learning model. This API allows users to send text for translation between different languages.
+This application uses pipeline from @xenova/transformers. 
 
 ## Features
 - Supports multiple languages for translation.
@@ -41,7 +42,7 @@ node-translation-api
 ## Configuration
 Create a `.env` file in the root directory and add your configuration variables. For example:
 ```
-API_KEY=your_api_key
+PORT=api_port
 ```
 
 ## Usage
@@ -57,15 +58,15 @@ The server will be running on `http://localhost:3000`.
 - **Request Body:**
   ```json
   {
-    "text": "Text to be translated",
-    "sourceLanguage": "eng_Latn",
-    "targetLanguage": "fra_Latn"
+    "text": "As stated before",
+    "src_lang": "eng_Latn",
+    "tgt_lang": "hin_Deva"
   }
   ```
 - **Response:**
   ```json
   {
-    "translatedText": "Texte traduit"
+    "translation_text": "जैसा कि पहले कहा गया है"
   }
   ```
 
